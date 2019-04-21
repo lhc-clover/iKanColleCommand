@@ -1,4 +1,4 @@
-module Pods_KanColleCommand {
+framework module Pods_KanColleCommand {
   umbrella header "Pods-KanColleCommand-umbrella.h"
 
   export *

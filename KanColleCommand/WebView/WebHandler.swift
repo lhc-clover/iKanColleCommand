@@ -17,10 +17,9 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
         var intercept = false
         if let url: URL = request.url {
             let method = request.httpMethod ?? ""
-            intercept =
-                    (key == nil) &&
-                            ("GET".caseInsensitiveCompare(method) == ComparisonResult.orderedSame) &&
-                            shouldIntercept(url: url)
+            intercept = (key == nil)
+                    && ("GET".caseInsensitiveCompare(method) == .orderedSame)
+                    && shouldIntercept(url: url)
         }
         return intercept
     }
@@ -62,11 +61,22 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let e = error {
-            self.client?.urlProtocol(self, didFailWithError: e)
+            print(e)
+            loadResponseFromWeb()
         } else {
             if (CacheManager.shouldCache(url: self.request.url) &&
                     ("GET".caseInsensitiveCompare(request.httpMethod ?? "") == ComparisonResult.orderedSame)) {
                 CacheManager.saveFile(url: self.request.url, data: self.receivedData)
+            }
+            if (self.request.url?.path.caseInsensitiveCompare("/kcs2/js/main.js") == ComparisonResult.orderedSame) {
+                do {
+                    if let file = Bundle.main.path(forResource: "bridge", ofType: "js") {
+                        let content = try Data(contentsOf: URL(fileURLWithPath: file))
+                        self.client?.urlProtocol(self, didLoad: content)
+                    }
+                } catch {
+                    print("Error append js file")
+                }
             }
             self.client?.urlProtocolDidFinishLoading(self)
         }
@@ -83,11 +93,23 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     private class func shouldIntercept(url: URL) -> Bool {
         let path = url.path
-        return (path.starts(with: "/kcs/") || path.starts(with: "/kcs2/"))
+        return (path.starts(with: "/kcs/")
+                || path.starts(with: "/kcs2/")
+                || path.starts(with: "/kcsapi/"))
     }
 
     private func loadResponseFromCache() {
-        if let data = CacheManager.readFile(url: self.request.url) {
+        if var data = CacheManager.readFile(url: self.request.url) {
+            if (self.request.url?.path.caseInsensitiveCompare("/kcs2/js/main.js") == ComparisonResult.orderedSame) {
+                do {
+                    if let file = Bundle.main.path(forResource: "bridge", ofType: "js") {
+                        let content = try Data(contentsOf: URL(fileURLWithPath: file))
+                        data.append(content)
+                    }
+                } catch {
+                    print("Error append js file")
+                }
+            }
             let mimeType = Utils.getMimeType(url: self.request.url)
             let size = data.count
             let headers = [
@@ -96,7 +118,7 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
                 "Content-Length": String(format: "%d", arguments: [size]),
                 "Connection": "keep-alive",
                 "Pragma": "public",
-                "Cache-Control": "no-cache",
+                "Cache-Control": "max-age=2592000, public",
                 "Accept-Ranges": "bytes"
             ]
             let response = HTTPURLResponse(url: self.request.url!, statusCode: 200, httpVersion: "1.1", headerFields: headers)
