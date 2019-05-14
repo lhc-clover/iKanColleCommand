@@ -23,6 +23,11 @@ class KCWebView: UIWebView {
         loadRequest(URLRequest(url: url!))
     }
 
+    func loadBlankPage() {
+        let url = URL(string: "about:blank")
+        loadRequest(URLRequest(url: url!))
+    }
+
     @objc private func gameStart(n: Notification) {
         OperationQueue.main.addOperation {
             self.stringByEvaluatingJavaScript(from: Constants.FULL_SCREEN_SCRIPT)

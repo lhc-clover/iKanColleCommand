@@ -14,7 +14,7 @@ protocol GripDelegate {
 class GripView: UIView {
 
     private var delegate: GripDelegate? = nil
-    private let titles = Array(arrayLiteral: "舰", "战")
+    private let titles = Array(arrayLiteral: "舰队", "战斗", "任务")
 
     public func gripTo(view: UIView) {
         backgroundColor = UIColor(white: 0.144, alpha: 1)
@@ -23,7 +23,7 @@ class GripView: UIView {
             maker.right.equalTo(view.snp.left)
             maker.width.equalTo(32)
         }
-        let count = 2
+        let count = titles.count
         var last: UIButton? = nil
         for (i, title) in titles.enumerated() {
             let button = UIButton(type: .custom)

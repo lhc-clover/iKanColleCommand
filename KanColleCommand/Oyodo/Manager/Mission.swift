@@ -19,11 +19,10 @@ class Mission {
     }
 
     func isSameDay() -> Bool {
-        var now = Calendar.current
-        if let zone = TimeZone(secondsFromGMT: 32400) {
-            now.timeZone = zone
-        }
-        return now.isDateInToday(lastUpdate)
+        let now = Mission.getNowTime()
+        let result = Calendar.current.isDate(now, inSameDayAs: lastUpdate)
+        lastUpdate = now
+        return result
     }
 
     private class func getNowTime() -> Date {

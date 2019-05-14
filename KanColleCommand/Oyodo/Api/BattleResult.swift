@@ -58,6 +58,8 @@ class BattleResult: IBattleResult<BattleResultApiData> {
             Battle.instance.get = ship.api_ship_name
         }
         Battle.instance.phaseShift(value: Phase.BattleResult)
+
+        setMissionProgress(bean: self, type: MissionRequireType.BATTLE)
     }
 
 }

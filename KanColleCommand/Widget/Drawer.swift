@@ -19,6 +19,8 @@ class Drawer: UIView {
     private var container: ViewController!
     private var fleetVC: FleetVC!
     private var battleVC: BattleVC!
+    private var missionVC: MissionVC!
+
     private var maskingView: UIView!
     private var gripView: GripView!
 
@@ -74,17 +76,22 @@ class Drawer: UIView {
 
         fleetVC = FleetVC()
         battleVC = BattleVC()
+        missionVC = MissionVC()
         #if swift(>=4.2)
         container.addChild(fleetVC)
         container.addChild(battleVC)
+        container.addChild(missionVC)
         #else
         container.addChildViewController(fleetVC)
         container.addChildViewController(battleVC)
+        container.addChildViewController(missionVC)
         #endif
         fleetVC.view.frame = self.bounds
         battleVC.view.frame = self.bounds
+        missionVC.view.frame = self.bounds
         self.addSubview(fleetVC.view)
         self.addSubview(battleVC.view)
+        self.addSubview(missionVC.view)
     }
 
     @objc private func onTap() {
@@ -110,6 +117,9 @@ extension Drawer: GripDelegate {
         switch (index) {
         case 1:
             bringSubview(toFront: battleVC.view)
+            break
+        case 2:
+            bringSubview(toFront: missionVC.view)
             break
         default:
             bringSubview(toFront: fleetVC.view)

@@ -50,7 +50,7 @@ class Ship {
         nowFuel = portShip.api_fuel
         nowBullet = portShip.api_bull
         condition = portShip.api_cond
-        for num in 0...portShip.api_slotnum {
+        for num in 0...(portShip.api_slotnum - 1) {
             if let item = portShip.api_slot?[num] {
                 items.append(item)
             }

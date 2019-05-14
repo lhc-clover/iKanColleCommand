@@ -4,6 +4,8 @@
 //
 
 import Foundation
+import UIKit
+import RxSwift
 
 enum MissionRequireType {
     case NONE,
@@ -18,4 +20,111 @@ enum MissionRequireType {
          DESTROY_SHIP, //解体
          REMODEL_SLOT, //改修
          POWER_UP //强化
+}
+
+class MissionData {
+
+    public let description: String
+    public let require: Int
+    public let type: MissionRequireType
+    public let processor: (JsonBean) -> Int
+
+    init(description: String, require: Int, type: MissionRequireType,
+         processor: @escaping (JsonBean) -> Int) {
+        self.description = description
+        self.require = require
+        self.type = type
+        self.processor = processor
+    }
+
+}
+
+func getMissionData(byId: Int) -> MissionData? {
+    var data: MissionData? = nil
+    switch (byId) {
+    case 201:
+        data = MissionData(description: "获得胜利1次", require: 1, type: MissionRequireType.BATTLE,
+                processor: {
+                    bean in
+                    var count = 0
+                    if (isBattleWin(bean: bean as! IBattleResult<IBattleResultApiData>)) {
+                        count = 1
+                    }
+                    return count
+                })
+        break
+    case 216:
+        data = MissionData(description: "进行战斗1次", require: 1, type: MissionRequireType.BATTLE,
+                processor: {
+                    bean in
+                    return 1
+                })
+        break
+    case 210:
+        data = MissionData(description: "进行战斗10次", require: 10, type: MissionRequireType.BATTLE,
+                processor: {
+                    bean in
+                    return 1
+                })
+        break
+    default:
+        break
+    }
+    return data
+}
+
+func setMissionProgress(bean: JsonBean, type: MissionRequireType) {
+    do {
+        let questMap = try Mission.instance.questMap.value()
+        questMap.values
+                .filter { quest in
+                    quest.type == type
+                }
+                .forEach { quest in
+                    setQuestCounter(quest: quest, bean: bean)
+                }
+        Mission.instance.questMap.onNext(questMap)
+    } catch {
+        print("Got error in setMissionProgress")
+    }
+}
+
+func setQuestCounter(quest: Quest, bean: JsonBean) {
+    let increment = getMissionData(byId: quest.id)?.processor(bean) ?? 0
+    quest.current = min(quest.max, quest.current + increment)
+}
+
+func getQuestIndicatorColor(type: Int) -> UIColor {
+    var result = UIColor(hexString: "#A1A1A1")
+    switch (type) {
+    case 1:
+        result = UIColor(hexString: "#2C8D50")
+        break
+    case 2:
+        result = UIColor(hexString: "#E14A4A")
+        break
+    case 3:
+        result = UIColor(hexString: "#9DCD66")
+        break
+    case 4:
+        result = UIColor(hexString: "#42BCB6")
+        break
+    case 5:
+        result = UIColor(hexString: "#E6CB6F")
+        break
+    case 6:
+        result = UIColor(hexString: "#825940")
+        break
+    case 7:
+        result = UIColor(hexString: "#CFA9E0")
+        break
+    default:
+        break
+    }
+    return result
+}
+
+func isBattleWin(bean: IBattleResult<IBattleResultApiData>) -> Bool {
+    let rank = bean.api_data?.api_win_rank ?? ""
+    return (rank == "S" || rank == "A" || rank == "B")
 }

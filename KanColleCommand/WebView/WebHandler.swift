@@ -1,6 +1,7 @@
 import UIKit
 import CoreData
 import Foundation
+import Toaster
 
 class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSessionTaskDelegate {
 
@@ -18,7 +19,7 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
         if let url: URL = request.url {
             let method = request.httpMethod ?? ""
             intercept = (key == nil)
-                    && ("GET".caseInsensitiveCompare(method) == .orderedSame)
+//                    && ("GET".caseInsensitiveCompare(method) == .orderedSame)
                     && shouldIntercept(url: url)
         }
         return intercept
@@ -49,7 +50,11 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse,
                     completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-        self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+//        print("===============================================")
+//        print(dataTask.taskDescription)
+//        print(response.description)
+//        print("===============================================")
+        self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
         self.receivedData = Data()
         completionHandler(.allow)
     }
@@ -61,7 +66,12 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let e = error {
+            print("===============================================")
             print(e)
+            print("===============================================")
+//            self.client?.urlProtocol(self, didFailWithError: e)
+//            let tag = URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0
+//            Toast(text: "第\(tag + 1)次重试").show()
             loadResponseFromWeb()
         } else {
             if (CacheManager.shouldCache(url: self.request.url) &&
@@ -132,7 +142,9 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     private func loadResponseFromWeb() {
         let newRequest = (self.request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
-        URLProtocol.setProperty(true, forKey: Constants.TAG, in: newRequest)
+        let tag = URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0
+        print("retry count \(tag)")
+        URLProtocol.setProperty(tag + 1, forKey: Constants.TAG, in: newRequest)
         let defaultConfigObj = URLSessionConfiguration.default
         defaultConfigObj.urlCache = nil
         let defaultSession = Foundation.URLSession(configuration: defaultConfigObj, delegate: self, delegateQueue: nil)

@@ -15,13 +15,25 @@ class QuestList: JsonBean {
 
     override func process() {
         do {
-            let map = try Mission.instance.questMap.value()
+            var map = try Mission.instance.questMap.value()
             let tabId = parse(value: params["api_tab_id"])
             if (tabId == 9 || !Mission.instance.isSameDay()) {
                 map.forEach { key, value in
                     value.state = 1
                 }
             }
+
+            api_data?.api_list.forEach { s in
+                let data = QuestListBean.deserialize(from: s)
+                if let id = data?.api_no {
+                    if let quest = map[id] {
+                        quest.setup(bean: data)
+                    } else {
+                        map[id] = Quest(bean: data)
+                    }
+                }
+            }
+            Mission.instance.questMap.onNext(map)
         } catch {
             print("Got error in QuestList process")
         }
@@ -35,7 +47,7 @@ class QuestListApiData: HandyJSON {
     var api_completed_kind: Int = 0
     var api_page_count: Int = 0
     var api_disp_page: Int = 0
-    var api_list = Array<String>()
+    var api_list = Array<Dictionary<String, Any>>()
     var api_exec_count: Int = 0
     var api_exec_type: Int = 0
 

@@ -15,7 +15,7 @@ class DestroyShip: JsonBean {
 
     override func process() {
         let slotDestroy = params["api_slot_dest_flag"] == "1"
-        let shipIds = params["api_ship_id"]?.components(separatedBy: "%2C")
+        let shipIds = params["api_ship_id"]?.components(separatedBy: ",")
         var slotIds = Array<Int>()
         shipIds?.forEach { shipId in
             let id = parse(value: shipId)

@@ -31,6 +31,7 @@
 		C602B05DBA589F74F6DBD91C /* RequireInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60FE5A3EA598BCB448EB3D1 /* RequireInfo.swift */; };
 		C602D0FBE12A6834657C1650 /* BattleAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600C34FD9E0262F451C37AA /* BattleAir.swift */; };
 		C602D6D0C83BB51A12306A6B /* BattleNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E657E36BD1BDEEBFFE8E1 /* BattleNext.swift */; };
+		C6032EDD0A03F7FDB8912999 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = C60EB3466E6CFC31FD43471F /* reload.png */; };
 		C6036A28F3CABAA0233A4253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AA770F5514D4CBEC193DA /* AppDelegate.swift */; };
 		C60380E7F74A8EC05F884F2E /* slot_46.png in Resources */ = {isa = PBXBuildFile; fileRef = C60BDA4035BE343933151CF9 /* slot_46.png */; };
 		C6038E643376462DA5D234B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C603F6E069897E869ECE8C8C /* LaunchScreen.storyboard */; };
@@ -61,7 +62,6 @@
 		C6064A58220B8304A0405325 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6036FA901882B8B05B68BEF /* ViewController.swift */; };
 		C60676A37550FA65D111B9FE /* slot_44.png in Resources */ = {isa = PBXBuildFile; fileRef = C60C72EE01E0F5C7D022DB30 /* slot_44.png */; };
 		C60687ECA5DF72AFC7551CF7 /* FleetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601CBF4A4435262D600D988 /* FleetUtils.swift */; };
-		C60692DD62A73E2B421EFE43 /* UIWebViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C604E090633D1CF676BBA7DC /* UIWebViewExt.swift */; };
 		C606B75BDE21941F0523E345 /* slot_18.png in Resources */ = {isa = PBXBuildFile; fileRef = C6097F6325D861ECB1C2C056 /* slot_18.png */; };
 		C606B87F80F43ABD1BF0FF85 /* JsonBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C601EA86CF74B27D8202AEC4 /* JsonBean.swift */; };
 		C607188757501EBC6FFFF37F /* slot_6.png in Resources */ = {isa = PBXBuildFile; fileRef = C602F618B6822B69047B78E0 /* slot_6.png */; };
@@ -122,6 +122,7 @@
 		C60E0B0F6C9ED731A71C5388 /* slot_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C60716E10EC15C829F5EC522 /* slot_1.png */; };
 		C60E37C96FBA9BE38A195592 /* slot_43.png in Resources */ = {isa = PBXBuildFile; fileRef = C601E077F89B375E6B01FF10 /* slot_43.png */; };
 		C60E3EDD26DD96BFDF8434B5 /* PracticeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60CE19F4F5E948F58AC6101 /* PracticeResult.swift */; };
+		C60E4574905AC5C0AC66F693 /* MissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C604D66013768942680732EA /* MissionVC.swift */; };
 		C60E477C9B58D2F4FCF7B730 /* BattleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C602AA615C49053A678E2107 /* BattleVC.swift */; };
 		C60E57039738BAF8344DDCA0 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D3F9EBC778C99476973A9 /* Mission.swift */; };
 		C60E93C9F13696427AA6CEBB /* SpeedChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60DD5F4C00C815DD3C2522D /* SpeedChange.swift */; };
@@ -192,7 +193,7 @@
 		C6049AC379A5B3CD81E2295D /* slot_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_19.png; sourceTree = "<group>"; };
 		C604A8CFE7E615D4BBA93893 /* RemodelSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemodelSlot.swift; sourceTree = "<group>"; };
 		C604B0EE28DAF1DF6AD4C4BF /* BattleStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleStart.swift; sourceTree = "<group>"; };
-		C604E090633D1CF676BBA7DC /* UIWebViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewExt.swift; sourceTree = "<group>"; };
+		C604D66013768942680732EA /* MissionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionVC.swift; sourceTree = "<group>"; };
 		C60516484616A00807A82136 /* Oyodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oyodo.swift; sourceTree = "<group>"; };
 		C605389B2B1940EBAA74C127 /* slot_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_26.png; sourceTree = "<group>"; };
 		C6053991BF4943A7B068671A /* MapSpotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSpotHelper.swift; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 		C60E384C65DD6853A2066230 /* SlotDeprive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotDeprive.swift; sourceTree = "<group>"; };
 		C60E657E36BD1BDEEBFFE8E1 /* BattleNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleNext.swift; sourceTree = "<group>"; };
 		C60E827F7B7EBF59C77EE148 /* MissionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionUtils.swift; sourceTree = "<group>"; };
+		C60EB3466E6CFC31FD43471F /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		C60EBD2F6C9FD7A64BC01E66 /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		C60EE05A6DB97CA59BDA9AE9 /* NyukyoStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyukyoStart.swift; sourceTree = "<group>"; };
 		C60EEDDE8EA04915F77E526C /* KanColleCommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanColleCommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,7 +307,6 @@
 				C6007ABAD2449D449093B066 /* Utils.swift */,
 				C60977D55641E6FF5131EE0E /* Constants.swift */,
 				C60B199FD227783246028533 /* KCWebView.swift */,
-				C604E090633D1CF676BBA7DC /* UIWebViewExt.swift */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -454,6 +455,7 @@
 			children = (
 				C60B167C46AD1B2BAB20241F /* FleetVC.swift */,
 				C602AA615C49053A678E2107 /* BattleVC.swift */,
+				C604D66013768942680732EA /* MissionVC.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -519,6 +521,7 @@
 				C60BDA4035BE343933151CF9 /* slot_46.png */,
 				C60D417B108472841CA34801 /* slot_47.png */,
 				C60084EE7985C15B28728A61 /* tag_repair.png */,
+				C60EB3466E6CFC31FD43471F /* reload.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				ORGANIZATIONNAME = CC;
 				TargetAttributes = {
 					C60A275024F5880556F19616 = {
+						DevelopmentTeam = 7T57RPQD4K;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -653,6 +657,7 @@
 				C604DD0442B6E9538719A232 /* slot_47.png in Resources */,
 				C6015D5598A8D97D44AE3F12 /* map.json in Resources */,
 				C60577F895480B218423004E /* tag_repair.png in Resources */,
+				C6032EDD0A03F7FDB8912999 /* reload.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +699,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -703,6 +709,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -724,7 +731,6 @@
 				C60BA0B9848CD566ADC37678 /* Utils.swift in Sources */,
 				C60FE283DECB748D6AF52FFF /* Constants.swift in Sources */,
 				C604BA2BDB3ED644F731BA86 /* KCWebView.swift in Sources */,
-				C60692DD62A73E2B421EFE43 /* UIWebViewExt.swift in Sources */,
 				C60CC2D7C8DAB564E870B03B /* Oyodo.swift in Sources */,
 				C60B538B27179E55047BDA91 /* Raw.swift in Sources */,
 				C60BBAEEAE46B978BDC004EB /* Fleet.swift in Sources */,
@@ -789,6 +795,7 @@
 				C60E93C9F13696427AA6CEBB /* SpeedChange.swift in Sources */,
 				C601E78197344E912B5AE9D9 /* GripView.swift in Sources */,
 				C60D8461F5EFC509937A5A3C /* Drawer.swift in Sources */,
+				C60E4574905AC5C0AC66F693 /* MissionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,7 +828,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7T57RPQD4K;
 				INFOPLIST_FILE = KanColleCommand/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -841,7 +848,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7T57RPQD4K;
 				INFOPLIST_FILE = KanColleCommand/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

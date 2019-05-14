@@ -236,7 +236,7 @@ private class ShipCell: UITableViewCell {
             maker.left.equalTo(nameText.snp.left)
             maker.top.equalTo(nameText.snp.bottom).offset(4)
             maker.bottom.equalTo(root.snp.bottom).offset(-4)
-            maker.right.equalTo(nameText.snp.right)
+            maker.width.equalTo(50)
         }
         levelText.numberOfLines = 1
         levelText.lineBreakMode = .byTruncatingTail
@@ -275,8 +275,8 @@ private class ShipCell: UITableViewCell {
         statusTag.snp.makeConstraints { maker in
             maker.width.equalTo(16)
             maker.height.equalTo(16)
-            maker.centerY.equalTo(nameText.snp.centerY)
-            maker.left.equalTo(nameText.snp.right).offset(8)
+            maker.centerY.equalTo(levelText.snp.centerY)
+            maker.left.equalTo(levelText.snp.right).offset(8)
         }
 
         // Slot ex
@@ -320,7 +320,7 @@ private class ShipCell: UITableViewCell {
             levelText.text = "Lv. \(ship.level)"
             condText.text = "★\(ship.condition)"
             condText.textColor = getConditionColor(cond: ship.condition)
-            hpText.text = "\(ship.hp()) / \(ship.maxHp)"
+            hpText.text = "\(max(ship.hp(), 1)) / \(ship.maxHp)"
             statusTag.image = getTagImage(shipId: ship.id)
             if let exItem = Fleet.instance.slotMap[ship.itemEx] {
                 slotEx.image = UIImage.init(named: "slot_\(exItem.type).png")

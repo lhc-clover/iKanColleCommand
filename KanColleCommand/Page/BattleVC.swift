@@ -180,6 +180,10 @@ class BattleVC: UIViewController {
             nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
             let spot = MapSpotHelper.instance.getSpotMarker(area: Battle.instance.area, map: Battle.instance.map, route: Battle.instance.route)
             nextText.text = "罗盘: \(spot?[safe: 1] ?? "")"
+            headingText.text = ""
+            airCommandText.text = ""
+            resultText.text = ""
+            getText.text = ""
             break
         case Phase.Next:
             nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
@@ -190,12 +194,22 @@ class BattleVC: UIViewController {
             resultText.text = ""
             getText.text = ""
             break
-        case Phase.BattleDaytime, Phase.BattleNight:
+        case Phase.BattleDaytime, Phase.BattleNight, Phase.BattleNightSp, Phase.BattleAir:
+            nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
+            let spot = MapSpotHelper.instance.getSpotMarker(area: Battle.instance.area, map: Battle.instance.map, route: Battle.instance.route)
+            nextText.text = "\(spot?[safe: 1] ?? "")"
             headingText.text = buildHeadingStr(heading: Battle.instance.heading)
             airCommandText.text = buildAirCommandStr(air: Battle.instance.airCommand)
             resultText.text = Battle.instance.rank
+            getText.text = ""
             break
         case Phase.BattleResult:
+            nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
+            let spot = MapSpotHelper.instance.getSpotMarker(area: Battle.instance.area, map: Battle.instance.map, route: Battle.instance.route)
+            nextText.text = "\(spot?[safe: 1] ?? "")"
+            headingText.text = buildHeadingStr(heading: Battle.instance.heading)
+            airCommandText.text = buildAirCommandStr(air: Battle.instance.airCommand)
+            resultText.text = Battle.instance.rank
             getText.text = "捞: \(Battle.instance.get)"
             break
         default:
@@ -236,7 +250,7 @@ class BattleVC: UIViewController {
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
             }
-            cell.set(ship: friendFleet1[indexPath.item])
+            cell.set(ship: friendFleet1[indexPath.item], friend: true)
             return cell
         }
 
@@ -269,7 +283,7 @@ class BattleVC: UIViewController {
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
             }
-            cell.set(ship: enemyFleet1[indexPath.item])
+            cell.set(ship: enemyFleet1[indexPath.item], friend: false)
             return cell
         }
 
@@ -329,7 +343,7 @@ private class BattleCell: UITableViewCell {
         cellRoot.addSubview(hpText)
         hpText.snp.makeConstraints { maker in
             maker.right.equalTo(cellRoot).offset(-4)
-            maker.width.equalTo(85)
+            maker.width.equalTo(80)
             maker.height.equalTo(cellRoot)
         }
         hpText.numberOfLines = 1
@@ -354,16 +368,22 @@ private class BattleCell: UITableViewCell {
         nameText.tag = "nameText".hash
     }
 
-    func set(ship: Ship) {
-        let hp = leftView.viewWithTag("hp".hash) as! HpBar
-        hp.set(percent: CGFloat(ship.hp()) / CGFloat(ship.maxHp))
+    func set(ship: Ship, friend: Bool) {
+        let hpBar = leftView.viewWithTag("hp".hash) as! HpBar
+        hpBar.set(percent: CGFloat(ship.hp()) / CGFloat(ship.maxHp))
         let nameText = leftView.viewWithTag("nameText".hash) as! UILabel
         nameText.text = ship.name
         let hpText = leftView.viewWithTag("hpText".hash) as! UILabel
-        var hpStr = "\(ship.hp()) / \(ship.maxHp)"
+        var hpValue = 0
+        if (friend) {
+            hpValue = max(ship.hp(), 1)
+        } else {
+            hpValue = ship.hp()
+        }
+        var hpStr = "\(hpValue) / \(ship.maxHp)"
         let lastDamage = ship.damage.last ?? 0
         if (lastDamage > 0) {
-            hpStr = hpStr + " (-\(lastDamage)"
+            hpStr = hpStr + " (-\(lastDamage))"
         }
         hpText.text = hpStr
     }

@@ -6,4 +6,5 @@ target :KanColleCommand do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'HandyJSON', '~> 5.0.0-beta.1'
+  pod 'Toaster'
 end

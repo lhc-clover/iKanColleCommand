@@ -65,11 +65,11 @@ class Battle {
                     }
                     break
                 case 1:
-                    var index = friendIndex
+                    var team = friendIndex
                     if (subTeam) {
-                        index = 1
+                        team = 1
                     }
-                    if let ship = Fleet.instance.getShips(index: index)[safe: index] {
+                    if let ship = Fleet.instance.getShips(index: team)[safe: index] {
                         let count = ship.damage.count
                         if (count > 0) {
                             ship.damage[count - 1] += Int(dArr[safe: j] ?? 0)
@@ -325,6 +325,7 @@ class Battle {
 
     private func settleDamage(to ship: Ship) {
         ship.nowHp -= ship.damage.reduce(0, +)
+        ship.damage.removeAll()
     }
 
 }
