@@ -12,11 +12,13 @@
 		C600267289FBB1B5CB83D4F7 /* BattleNightSp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600E2F28E1FB2811C399D06 /* BattleNightSp.swift */; };
 		C60032DCBAD6778EA3AB8E6A /* slot_36.png in Resources */ = {isa = PBXBuildFile; fileRef = C6025C1FA627C532327B8DE5 /* slot_36.png */; };
 		C600576CDD4CBA34995FE911 /* slot_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C605E233C8A8C4329F2B809E /* slot_32.png */; };
+		C6005C185646C3133DBDA91B /* BattleCombinedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C606CFE86C55528E7264793B /* BattleCombinedResult.swift */; };
 		C600E1EC81F4FC250841C717 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B9953A3140FA8440DB361 /* Start.swift */; };
 		C6010B34436845481795FC76 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6012A86034B29A89065ECBA /* Slot.swift */; };
 		C60117BB0DA1214195E168F2 /* BattleNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6077FEDE7951AF76BB8E7F1 /* BattleNight.swift */; };
 		C6015D5598A8D97D44AE3F12 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = C601F26B23420A8C03705A08 /* map.json */; };
 		C60161BE4528F4D1C509E9CE /* slot_21.png in Resources */ = {isa = PBXBuildFile; fileRef = C60558212ABD198AAD26F2B4 /* slot_21.png */; };
+		C6016B88D3F501580151D5E8 /* BattleCombinedWaterEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D636C6B5E0883186B803E /* BattleCombinedWaterEach.swift */; };
 		C6018D258A9079D6193570FF /* slot_45.png in Resources */ = {isa = PBXBuildFile; fileRef = C609E7C2E92E810CC3D61982 /* slot_45.png */; };
 		C6018F0698B60E50F8B996C1 /* slot_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C60BBF41D2113389EFDCE62E /* slot_3.png */; };
 		C601A707F40FC097DB3A36BA /* slot_22.png in Resources */ = {isa = PBXBuildFile; fileRef = C60D96DDCCEE4798776AD042 /* slot_22.png */; };
@@ -67,18 +69,22 @@
 		C607188757501EBC6FFFF37F /* slot_6.png in Resources */ = {isa = PBXBuildFile; fileRef = C602F618B6822B69047B78E0 /* slot_6.png */; };
 		C6071A246FB4C7B951D17DB2 /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C0EB056D219A43DD9B690 /* Dock.swift */; };
 		C607346CDF5B5D15AE084DF9 /* slot_42.png in Resources */ = {isa = PBXBuildFile; fileRef = C6076E573AD0D010AB23C203 /* slot_42.png */; };
+		C60786DC33A779A0922D6376 /* BattleCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60131996EDAA592E94EBF98 /* BattleCombined.swift */; };
 		C607D87F817C3835F48C27E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60FF98AA6E3FDAC202E22EA /* Assets.xcassets */; };
 		C607EA6D9705FB67766730F9 /* WebHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D8779E8B4743E6B63FC82 /* WebHandler.swift */; };
 		C607F672E47C15799C166228 /* slot_20.png in Resources */ = {isa = PBXBuildFile; fileRef = C60869B015F13913F309B8E7 /* slot_20.png */; };
+		C6082AD29A7E5FF09BD4EFD2 /* BattleCombinedEc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60341DAA587F651CB4EF6FE /* BattleCombinedEc.swift */; };
 		C6087C43E0494ED85B660D82 /* slot_40.png in Resources */ = {isa = PBXBuildFile; fileRef = C60312B18890C71498251882 /* slot_40.png */; };
 		C608A0CD95B9B380E9D136FE /* slot_38.png in Resources */ = {isa = PBXBuildFile; fileRef = C6031ED7CF947B8DF3DE2B83 /* slot_38.png */; };
 		C608BD76EEF300700746FADD /* slot_8.png in Resources */ = {isa = PBXBuildFile; fileRef = C60A543C0E718A22EC21AA0F /* slot_8.png */; };
 		C608DBFA7AF90BF99B12760E /* QuestClear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C606E0CBA0DC1F0A6AF395B0 /* QuestClear.swift */; };
+		C608F57103A3607CA4E41A96 /* BattleCombinedAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6047954A78307EE46DAB6CB /* BattleCombinedAir.swift */; };
 		C608FC0EDE88654B27BFA295 /* slot_16.png in Resources */ = {isa = PBXBuildFile; fileRef = C603AAD5F86611943D51ED60 /* slot_16.png */; };
 		C60953089383AA6CE404D10E /* BattleDaytime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C606C5FCF154938D7C92333F /* BattleDaytime.swift */; };
 		C60955B66744B09E3B48C37E /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60CC3F19E8BABAE68B5B024 /* PowerUp.swift */; };
 		C609600CB53685D7A15EABB0 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EBD2F6C9FD7A64BC01E66 /* Practice.swift */; };
 		C6096D3106CC71ED9B72E0B0 /* slot_39.png in Resources */ = {isa = PBXBuildFile; fileRef = C60F38721E791BDA1AD8AB74 /* slot_39.png */; };
+		C6097F95BC450322B53E4430 /* BattleCombinedEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6033D119B77BE4DC868684C /* BattleCombinedEach.swift */; };
 		C609C95CD5C53CB65D9F9A43 /* slot_19.png in Resources */ = {isa = PBXBuildFile; fileRef = C6049AC379A5B3CD81E2295D /* slot_19.png */; };
 		C609CB594241E8A7061D7BFD /* FleetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B167C46AD1B2BAB20241F /* FleetVC.swift */; };
 		C609F6CDFDBB180C678B85A0 /* DestroyShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60BC20A1B3EF4B5CFAF8246 /* DestroyShip.swift */; };
@@ -92,6 +98,7 @@
 		C60B19E6CACB3B1A7848513E /* NDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6024832859DAA4B22912AA4 /* NDock.swift */; };
 		C60B538B27179E55047BDA91 /* Raw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6031347E4C7C21654E3FFC3 /* Raw.swift */; };
 		C60B66BE50CB63D2DFC69B9B /* DestroyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600010C70E9931478A661DB /* DestroyItem.swift */; };
+		C60B7809F648E03BE82C3DED /* BattleCombinedWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60428585419A73D01A7991C /* BattleCombinedWater.swift */; };
 		C60B7FC7D79481828309559D /* MissionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E827F7B7EBF59C77EE148 /* MissionUtils.swift */; };
 		C60B90F121B62F50451B367A /* KDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C606E32ED05D54ED2D1C80C9 /* KDock.swift */; };
 		C60BA0B9848CD566ADC37678 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6007ABAD2449D449093B066 /* Utils.swift */; };
@@ -111,6 +118,7 @@
 		C60D48474DCBBA3A4D7D0ECD /* slot_0.png in Resources */ = {isa = PBXBuildFile; fileRef = C602CFBC1482BF401851866B /* slot_0.png */; };
 		C60D65AB0E243628FE26A911 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608689972004F96C9275161 /* Change.swift */; };
 		C60D759334B2C7A63B512E93 /* slot_31.png in Resources */ = {isa = PBXBuildFile; fileRef = C605F352F10CB0FC9C0D7C9B /* slot_31.png */; };
+		C60D76267259ECBF7E5C87A5 /* BattleCombinedNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A4C74B7FF0005C1F9AE11 /* BattleCombinedNight.swift */; };
 		C60D80F0D2FDD7AE43D368D0 /* slot_10.png in Resources */ = {isa = PBXBuildFile; fileRef = C608148AC775FA28AE34BA43 /* slot_10.png */; };
 		C60D8461F5EFC509937A5A3C /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6045D47B081D2457C8FEF74 /* Drawer.swift */; };
 		C60D8740581A3E4AE1141FA6 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60DB9AD277F47C7F8EBD9A6 /* Battle.swift */; };
@@ -142,6 +150,7 @@
 /* Begin PBXFileReference section */
 		2B1295577464041F4DC73396 /* Pods-KanColleCommand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanColleCommand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KanColleCommand/Pods-KanColleCommand.debug.xcconfig"; sourceTree = "<group>"; };
 		4202BEA5224133F300AED2D4 /* Files.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Files.bundle; path = /Users/cc/Development/github/iKanColleCommand/KanColleCommand/Files.bundle; sourceTree = "<absolute>"; };
+		4211C351228C636100F7B267 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		423AF779219FECC100C4BCE9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		61B0E6346279897DF1C7D1A8 /* Pods_KanColleCommand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanColleCommand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13C1AA5A0C1AE357F660C12 /* Pods-KanColleCommand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanColleCommand.release.xcconfig"; path = "Pods/Target Support Files/Pods-KanColleCommand/Pods-KanColleCommand.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +164,7 @@
 		C600F393B5E2ECB2AAEB0F8F /* Ship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		C6010E08739966591A1CE2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C6012A86034B29A89065ECBA /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
+		C60131996EDAA592E94EBF98 /* BattleCombined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombined.swift; sourceTree = "<group>"; };
 		C601556D1279EBF82B9DC4E5 /* slot_34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_34.png; sourceTree = "<group>"; };
 		C601CBF4A4435262D600D988 /* FleetUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleetUtils.swift; sourceTree = "<group>"; };
 		C601E077F89B375E6B01FF10 /* slot_43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_43.png; sourceTree = "<group>"; };
@@ -181,14 +191,18 @@
 		C6031347E4C7C21654E3FFC3 /* Raw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raw.swift; sourceTree = "<group>"; };
 		C6031ED7CF947B8DF3DE2B83 /* slot_38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_38.png; sourceTree = "<group>"; };
 		C6033A047892D60D2381DF12 /* slot_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_17.png; sourceTree = "<group>"; };
+		C6033D119B77BE4DC868684C /* BattleCombinedEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedEach.swift; sourceTree = "<group>"; };
+		C60341DAA587F651CB4EF6FE /* BattleCombinedEc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedEc.swift; sourceTree = "<group>"; };
 		C60350567AFB6FBBA717945C /* slot_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_4.png; sourceTree = "<group>"; };
 		C6036FA901882B8B05B68BEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C60370758B94FB19D95980E0 /* bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bridge.js; sourceTree = "<group>"; };
 		C603707CFEF26D4045DF579C /* HpBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HpBar.swift; sourceTree = "<group>"; };
 		C603AAD5F86611943D51ED60 /* slot_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_16.png; sourceTree = "<group>"; };
 		C6040A16A71BE544D2C4F5B8 /* slot_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_15.png; sourceTree = "<group>"; };
+		C60428585419A73D01A7991C /* BattleCombinedWater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedWater.swift; sourceTree = "<group>"; };
 		C6045D114B0F437E698ACE89 /* Repair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repair.swift; sourceTree = "<group>"; };
 		C6045D47B081D2457C8FEF74 /* Drawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
+		C6047954A78307EE46DAB6CB /* BattleCombinedAir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedAir.swift; sourceTree = "<group>"; };
 		C60486DE65E5BB9F12917CF0 /* slot_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_24.png; sourceTree = "<group>"; };
 		C6049AC379A5B3CD81E2295D /* slot_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_19.png; sourceTree = "<group>"; };
 		C604A8CFE7E615D4BBA93893 /* RemodelSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemodelSlot.swift; sourceTree = "<group>"; };
@@ -205,6 +219,7 @@
 		C606278A5F4F5B2ABE2721B1 /* slot_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_37.png; sourceTree = "<group>"; };
 		C606C5FCF154938D7C92333F /* BattleDaytime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleDaytime.swift; sourceTree = "<group>"; };
 		C606CA5BAC96B78DB04552F7 /* SlotExchangeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotExchangeIndex.swift; sourceTree = "<group>"; };
+		C606CFE86C55528E7264793B /* BattleCombinedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedResult.swift; sourceTree = "<group>"; };
 		C606E0CBA0DC1F0A6AF395B0 /* QuestClear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestClear.swift; sourceTree = "<group>"; };
 		C606E32ED05D54ED2D1C80C9 /* KDock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDock.swift; sourceTree = "<group>"; };
 		C606E9B60DBB04647A193135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -228,6 +243,7 @@
 		C60977D55641E6FF5131EE0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6097F6325D861ECB1C2C056 /* slot_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_18.png; sourceTree = "<group>"; };
 		C609E7C2E92E810CC3D61982 /* slot_45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_45.png; sourceTree = "<group>"; };
+		C60A4C74B7FF0005C1F9AE11 /* BattleCombinedNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedNight.swift; sourceTree = "<group>"; };
 		C60A543C0E718A22EC21AA0F /* slot_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_8.png; sourceTree = "<group>"; };
 		C60A73497C3006121D42C478 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		C60AA770F5514D4CBEC193DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +267,7 @@
 		C60D3F9EBC778C99476973A9 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		C60D417B108472841CA34801 /* slot_47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_47.png; sourceTree = "<group>"; };
 		C60D49F480B87AAE9DF46DC0 /* slot_41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_41.png; sourceTree = "<group>"; };
+		C60D636C6B5E0883186B803E /* BattleCombinedWaterEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedWaterEach.swift; sourceTree = "<group>"; };
 		C60D6FE7A1A9B20A1EB2F70F /* slot_35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_35.png; sourceTree = "<group>"; };
 		C60D7E46BB847DCF279EB16F /* BattleUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleUtils.swift; sourceTree = "<group>"; };
 		C60D8779E8B4743E6B63FC82 /* WebHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebHandler.swift; sourceTree = "<group>"; };
@@ -353,6 +370,14 @@
 				C606CA5BAC96B78DB04552F7 /* SlotExchangeIndex.swift */,
 				C60DD78BCC15EAFA61A527A1 /* SlotItem.swift */,
 				C60DD5F4C00C815DD3C2522D /* SpeedChange.swift */,
+				C60131996EDAA592E94EBF98 /* BattleCombined.swift */,
+				C6047954A78307EE46DAB6CB /* BattleCombinedAir.swift */,
+				C6033D119B77BE4DC868684C /* BattleCombinedEach.swift */,
+				C60341DAA587F651CB4EF6FE /* BattleCombinedEc.swift */,
+				C60A4C74B7FF0005C1F9AE11 /* BattleCombinedNight.swift */,
+				C606CFE86C55528E7264793B /* BattleCombinedResult.swift */,
+				C60428585419A73D01A7991C /* BattleCombinedWater.swift */,
+				C60D636C6B5E0883186B803E /* BattleCombinedWaterEach.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -414,6 +439,7 @@
 				C608DF1D069BF84F9B0A6094 /* Widget */,
 				C60F0A3A447580140D86DC8D /* Images */,
 				C60E18E9080E904BFD5F89AC /* Resources */,
+				4211C351228C636100F7B267 /* Bridge-Header.h */,
 			);
 			path = KanColleCommand;
 			sourceTree = "<group>";
@@ -576,6 +602,11 @@
 					C60A275024F5880556F19616 = {
 						DevelopmentTeam = 7T57RPQD4K;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -796,6 +827,14 @@
 				C601E78197344E912B5AE9D9 /* GripView.swift in Sources */,
 				C60D8461F5EFC509937A5A3C /* Drawer.swift in Sources */,
 				C60E4574905AC5C0AC66F693 /* MissionVC.swift in Sources */,
+				C60786DC33A779A0922D6376 /* BattleCombined.swift in Sources */,
+				C608F57103A3607CA4E41A96 /* BattleCombinedAir.swift in Sources */,
+				C6097F95BC450322B53E4430 /* BattleCombinedEach.swift in Sources */,
+				C6082AD29A7E5FF09BD4EFD2 /* BattleCombinedEc.swift in Sources */,
+				C60D76267259ECBF7E5C87A5 /* BattleCombinedNight.swift in Sources */,
+				C6005C185646C3133DBDA91B /* BattleCombinedResult.swift in Sources */,
+				C60B7809F648E03BE82C3DED /* BattleCombinedWater.swift in Sources */,
+				C6016B88D3F501580151D5E8 /* BattleCombinedWaterEach.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +874,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.KanColleCommand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -855,7 +894,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.KanColleCommand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -918,6 +957,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -971,6 +1011,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

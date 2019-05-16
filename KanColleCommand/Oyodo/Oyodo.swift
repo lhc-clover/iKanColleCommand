@@ -23,6 +23,22 @@ class Oyodo {
         var bean: JsonBean? = nil
         if (url.hasSuffix("api_req_sortie/ld_airbattle")) {
             bean = BattleAir.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/battle")) {
+            bean = BattleCombined.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/ld_airbattle")) {
+            bean = BattleCombinedAir.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/each_battle")) {
+            bean = BattleCombinedEach.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/ec_battle")) {
+            bean = BattleCombinedEc.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/ec_midnight_battle")) {
+            bean = BattleCombinedNight.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/battleresult")) {
+            bean = BattleCombinedResult.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/battle_water")) {
+            bean = BattleCombinedWater.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_combined_battle/each_battle_water")) {
+            bean = BattleCombinedWaterEach.deserialize(from: response)
         } else if (url.hasSuffix("api_req_sortie/battle")) {
             bean = BattleDaytime.deserialize(from: response)
         } else if (url.hasSuffix("api_req_map/next")) {

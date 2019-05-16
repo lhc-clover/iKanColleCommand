@@ -249,8 +249,9 @@ class BattleVC: UIViewController {
             var cell: BattleCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? BattleCell
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
+                cell.setCombined(Battle.instance.friendCombined, friend: true)
             }
-            cell.set(ship: friendFleet1[indexPath.item], friend: true)
+            cell.set(ship: friendFleet1[indexPath.item], shipCombined: friendFleet2[safe: indexPath.item], friend: true)
             return cell
         }
 
@@ -282,8 +283,9 @@ class BattleVC: UIViewController {
             var cell: BattleCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? BattleCell
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
+                cell.setCombined(Battle.instance.enemyCombined, friend: false)
             }
-            cell.set(ship: enemyFleet1[indexPath.item], friend: false)
+            cell.set(ship: enemyFleet1[indexPath.item], shipCombined: enemyFleet2[safe: indexPath.item], friend: false)
             return cell
         }
 
@@ -303,29 +305,23 @@ private class BattleCell: UITableViewCell {
 
         leftView = UIView()
         addSubview(leftView)
-//        leftView.snp.makeConstraints { maker in
-//            maker.left.equalTo(self)
-//            maker.top.equalTo(self)
-//            maker.bottom.equalTo(self).offset(-4)
-//            maker.right.equalTo(self.snp.centerX).offset(-2)
-//        }
         leftView.snp.makeConstraints { maker in
             maker.left.equalTo(self)
             maker.top.equalTo(self)
             maker.bottom.equalTo(self).offset(-4)
-            maker.right.equalTo(self)
+            maker.right.equalTo(self.snp.centerX).offset(-2)
         }
         addCellSubViews(to: leftView)
 
-//        rightView = UIView()
-//        addSubview(rightView)
-//        rightView.snp.makeConstraints { maker in
-//            maker.left.equalTo(self.snp.centerX).offset(2)
-//            maker.top.equalTo(self)
-//            maker.bottom.equalTo(leftView)
-//            maker.right.equalTo(self)
-//        }
-//        addCellSubViews(to: rightView)
+        rightView = UIView()
+        addSubview(rightView)
+        rightView.snp.makeConstraints { maker in
+            maker.left.equalTo(self.snp.centerX).offset(2)
+            maker.top.equalTo(self)
+            maker.bottom.equalTo(leftView)
+            maker.right.equalTo(self)
+        }
+        addCellSubViews(to: rightView)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -368,12 +364,26 @@ private class BattleCell: UITableViewCell {
         nameText.tag = "nameText".hash
     }
 
-    func set(ship: Ship, friend: Bool) {
-        let hpBar = leftView.viewWithTag("hp".hash) as! HpBar
+    func set(ship: Ship, shipCombined: Ship? = nil, friend: Bool) {
+        let mainView = (friend ? leftView : rightView)!
+        let combinedView = (friend ? rightView : leftView)!
+        set(parent: mainView, ship: ship, friend: friend)
+        if let item = shipCombined {
+            set(parent: combinedView, ship: item, friend: friend)
+        }
+    }
+
+    func setCombined(_ combined: Bool, friend: Bool) {
+        let combinedView = (friend ? rightView : leftView)!
+        combinedView.isHidden = !combined
+    }
+
+    private func set(parent: UIView, ship: Ship, friend: Bool) {
+        let hpBar = parent.viewWithTag("hp".hash) as! HpBar
         hpBar.set(percent: CGFloat(ship.hp()) / CGFloat(ship.maxHp))
-        let nameText = leftView.viewWithTag("nameText".hash) as! UILabel
+        let nameText = parent.viewWithTag("nameText".hash) as! UILabel
         nameText.text = ship.name
-        let hpText = leftView.viewWithTag("hpText".hash) as! UILabel
+        let hpText = parent.viewWithTag("hpText".hash) as! UILabel
         var hpValue = 0
         if (friend) {
             hpValue = max(ship.hp(), 1)

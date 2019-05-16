@@ -29,8 +29,9 @@ class DestroyShip: JsonBean {
             }
             Fleet.instance.deckShipIds.forEach { subject in
                 do {
-                    var ids = try subject.value()
-                    ids.removeFirst(parse(value: shipId))
+                    let ids = try subject.value().filter { (i: Int) -> Bool in
+                        i != id
+                    }
                     subject.onNext(ids)
                 } catch {
                     print("Got error in DestroyItem plusValue")

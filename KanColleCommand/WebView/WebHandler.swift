@@ -69,9 +69,12 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
             print("===============================================")
             print(e)
             print("===============================================")
-//            self.client?.urlProtocol(self, didFailWithError: e)
-//            let tag = URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0
-//            Toast(text: "第\(tag + 1)次重试").show()
+            let tag = (URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0) + 1
+            if (tag < 3) {
+                Toast(text: "第\(tag)次重试").show()
+            } else {
+                self.client?.urlProtocol(self, didFailWithError: e)
+            }
             loadResponseFromWeb()
         } else {
             if (CacheManager.shouldCache(url: self.request.url) &&
@@ -142,8 +145,9 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     private func loadResponseFromWeb() {
         let newRequest = (self.request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
+        newRequest.timeoutInterval = 30
         let tag = URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0
-        print("retry count \(tag)")
+        print("retry count \(tag) for \(request.url)")
         URLProtocol.setProperty(tag + 1, forKey: Constants.TAG, in: newRequest)
         let defaultConfigObj = URLSessionConfiguration.default
         defaultConfigObj.urlCache = nil
