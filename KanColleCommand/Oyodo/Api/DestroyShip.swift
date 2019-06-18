@@ -46,6 +46,8 @@ class DestroyShip: JsonBean {
         User.instance.shipCount.onNext(Fleet.instance.shipMap.count)
         Fleet.instance.slotWatcher.onNext(Transform.Remove(slotIds))
         User.instance.slotCount.onNext(Fleet.instance.slotMap.count)
+
+        setMissionProgress(bean: self, type: MissionRequireType.DESTROY_SHIP)
     }
 
 }

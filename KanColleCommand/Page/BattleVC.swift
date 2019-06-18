@@ -231,7 +231,7 @@ class BattleVC: UIViewController {
         }
 
         public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 24
+            return 30
         }
 
     }
@@ -249,8 +249,8 @@ class BattleVC: UIViewController {
             var cell: BattleCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? BattleCell
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
-                cell.setCombined(Battle.instance.friendCombined, friend: true)
             }
+            cell.setCombined(Battle.instance.friendCombined, friend: true)
             cell.set(ship: friendFleet1[indexPath.item], shipCombined: friendFleet2[safe: indexPath.item], friend: true)
             return cell
         }
@@ -265,7 +265,7 @@ class BattleVC: UIViewController {
         }
 
         public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 24
+            return 30
         }
 
     }
@@ -283,8 +283,8 @@ class BattleVC: UIViewController {
             var cell: BattleCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? BattleCell
             if cell == nil {
                 cell = BattleCell(style: .default, reuseIdentifier: cellIdentifier)
-                cell.setCombined(Battle.instance.enemyCombined, friend: false)
             }
+            cell.setCombined(Battle.instance.enemyCombined, friend: false)
             cell.set(ship: enemyFleet1[indexPath.item], shipCombined: enemyFleet2[safe: indexPath.item], friend: false)
             return cell
         }
@@ -303,24 +303,24 @@ private class BattleCell: UITableViewCell {
 
         self.backgroundColor = UIColor.clear
 
-        leftView = UIView()
-        addSubview(leftView)
-        leftView.snp.makeConstraints { maker in
-            maker.left.equalTo(self)
-            maker.top.equalTo(self)
-            maker.bottom.equalTo(self).offset(-4)
-            maker.right.equalTo(self.snp.centerX).offset(-2)
+        let container = UIStackView()
+        addSubview(container)
+        container.snp.makeConstraints { maker in
+            maker.left.equalTo(self).offset(4)
+            maker.right.equalTo(self).offset(-4)
+            maker.top.equalTo(self).offset(6)
+            maker.bottom.equalTo(self)
         }
-        addCellSubViews(to: leftView)
+        container.axis = .horizontal
+        container.distribution = .fillEqually
+        container.alignment = .fill
+        container.spacing = 4
 
+        leftView = UIView()
+        container.addArrangedSubview(leftView)
+        addCellSubViews(to: leftView)
         rightView = UIView()
-        addSubview(rightView)
-        rightView.snp.makeConstraints { maker in
-            maker.left.equalTo(self.snp.centerX).offset(2)
-            maker.top.equalTo(self)
-            maker.bottom.equalTo(leftView)
-            maker.right.equalTo(self)
-        }
+        container.addArrangedSubview(rightView)
         addCellSubViews(to: rightView)
     }
 

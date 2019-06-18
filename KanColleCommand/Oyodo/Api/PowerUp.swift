@@ -39,6 +39,8 @@ class PowerUp: JsonBean {
                 User.instance.slotCount.onNext(Fleet.instance.slotMap.count)
             }
         }
+
+        setMissionProgress(bean: self, type: MissionRequireType.POWER_UP)
     }
 
 }

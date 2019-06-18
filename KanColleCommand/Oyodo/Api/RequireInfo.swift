@@ -24,7 +24,7 @@ class RequireInfo: JsonBean {
             let slot = Slot(raw: rawSlot, port: item)
             Fleet.instance.slotMap[item.api_id] = slot
         }
-        Fleet.instance.slotWatcher.onNext(Transform.All())
+        Fleet.instance.slotWatcher.onNext(Transform.All)
         User.instance.slotCount.onNext(Fleet.instance.slotMap.count)
     }
 }

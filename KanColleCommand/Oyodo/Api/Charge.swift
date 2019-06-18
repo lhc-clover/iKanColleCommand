@@ -37,6 +37,8 @@ class Charge: JsonBean {
             }
         }
         Fleet.instance.shipWatcher.onNext(Transform.Change(shipIds))
+
+        setMissionProgress(bean: self, type: MissionRequireType.SUPPLY)
     }
 
 }

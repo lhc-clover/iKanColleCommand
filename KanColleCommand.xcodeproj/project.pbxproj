@@ -47,6 +47,7 @@
 		C6047AE1FDB7729229F5C631 /* BattleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D7E46BB847DCF279EB16F /* BattleUtils.swift */; };
 		C6048341CF751D7104064116 /* Expedition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60898C360179BF54B2FD464 /* Expedition.swift */; };
 		C604BA2BDB3ED644F731BA86 /* KCWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B199FD227783246028533 /* KCWebView.swift */; };
+		C604D218B4420B6F6593ECB5 /* SlotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C609C0664752645FCD27D530 /* SlotType.swift */; };
 		C604D83C627928ACC122DFDB /* slot_25.png in Resources */ = {isa = PBXBuildFile; fileRef = C60DA9AFA54F6BE4748EEAA1 /* slot_25.png */; };
 		C604DD0442B6E9538719A232 /* slot_47.png in Resources */ = {isa = PBXBuildFile; fileRef = C60D417B108472841CA34801 /* slot_47.png */; };
 		C604F50F2C367CB13ED00B7E /* RemodelSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C604A8CFE7E615D4BBA93893 /* RemodelSlot.swift */; };
@@ -69,6 +70,7 @@
 		C607188757501EBC6FFFF37F /* slot_6.png in Resources */ = {isa = PBXBuildFile; fileRef = C602F618B6822B69047B78E0 /* slot_6.png */; };
 		C6071A246FB4C7B951D17DB2 /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C0EB056D219A43DD9B690 /* Dock.swift */; };
 		C607346CDF5B5D15AE084DF9 /* slot_42.png in Resources */ = {isa = PBXBuildFile; fileRef = C6076E573AD0D010AB23C203 /* slot_42.png */; };
+		C607676777CD83910CEDE516 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6077DD0FBB7590D3C3552DD /* Const.swift */; };
 		C60786DC33A779A0922D6376 /* BattleCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60131996EDAA592E94EBF98 /* BattleCombined.swift */; };
 		C607D87F817C3835F48C27E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60FF98AA6E3FDAC202E22EA /* Assets.xcassets */; };
 		C607EA6D9705FB67766730F9 /* WebHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D8779E8B4743E6B63FC82 /* WebHandler.swift */; };
@@ -92,7 +94,6 @@
 		C60A17E8B3310A61E9EB55D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E19B49CC3167ED60EFCAF /* User.swift */; };
 		C60A2AEC719BE9592E27CD57 /* NyukyoStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EE05A6DB97CA59BDA9AE9 /* NyukyoStart.swift */; };
 		C60A6F912883AA809340A6FD /* slot_15.png in Resources */ = {isa = PBXBuildFile; fileRef = C6040A16A71BE544D2C4F5B8 /* slot_15.png */; };
-		C60A764D76F63DE0B35F7AE4 /* SlotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F4B2BF1BFBC45C9D3B848 /* SlotType.swift */; };
 		C60A7EA4D4DC8CE082EF4726 /* slot_35.png in Resources */ = {isa = PBXBuildFile; fileRef = C60D6FE7A1A9B20A1EB2F70F /* slot_35.png */; };
 		C60AD72DAA2358532EEFA7A3 /* MapSpotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6053991BF4943A7B068671A /* MapSpotHelper.swift */; };
 		C60B19E6CACB3B1A7848513E /* NDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6024832859DAA4B22912AA4 /* NDock.swift */; };
@@ -227,6 +228,7 @@
 		C60716E10EC15C829F5EC522 /* slot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_1.png; sourceTree = "<group>"; };
 		C6072ABEE1F163B14F31F553 /* MapSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSpot.swift; sourceTree = "<group>"; };
 		C6076E573AD0D010AB23C203 /* slot_42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_42.png; sourceTree = "<group>"; };
+		C6077DD0FBB7590D3C3552DD /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C6077FEDE7951AF76BB8E7F1 /* BattleNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleNight.swift; sourceTree = "<group>"; };
 		C60795D6493F63EB16304E68 /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		C607E81A58C1D23F4E0E16E4 /* slot_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_5.png; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		C608D5761D07AB08EBD690A3 /* Fleet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fleet.swift; sourceTree = "<group>"; };
 		C60977D55641E6FF5131EE0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6097F6325D861ECB1C2C056 /* slot_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_18.png; sourceTree = "<group>"; };
+		C609C0664752645FCD27D530 /* SlotType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotType.swift; sourceTree = "<group>"; };
 		C609E7C2E92E810CC3D61982 /* slot_45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_45.png; sourceTree = "<group>"; };
 		C60A4C74B7FF0005C1F9AE11 /* BattleCombinedNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleCombinedNight.swift; sourceTree = "<group>"; };
 		C60A543C0E718A22EC21AA0F /* slot_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_8.png; sourceTree = "<group>"; };
@@ -287,7 +290,6 @@
 		C60EE05A6DB97CA59BDA9AE9 /* NyukyoStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyukyoStart.swift; sourceTree = "<group>"; };
 		C60EEDDE8EA04915F77E526C /* KanColleCommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanColleCommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F38721E791BDA1AD8AB74 /* slot_39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_39.png; sourceTree = "<group>"; };
-		C60F4B2BF1BFBC45C9D3B848 /* SlotType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotType.swift; sourceTree = "<group>"; };
 		C60FBA302BB12A91F89F5406 /* MissionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionResult.swift; sourceTree = "<group>"; };
 		C60FE5A3EA598BCB448EB3D1 /* RequireInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequireInfo.swift; sourceTree = "<group>"; };
 		C60FED5948C8DDD3C4C01BDE /* BattleResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleResult.swift; sourceTree = "<group>"; };
@@ -391,7 +393,6 @@
 				C607E8C08C1528899ED0249B /* Build.swift */,
 				C6045D114B0F437E698ACE89 /* Repair.swift */,
 				C60795D6493F63EB16304E68 /* Quest.swift */,
-				C60F4B2BF1BFBC45C9D3B848 /* SlotType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -404,6 +405,8 @@
 				C60D7E46BB847DCF279EB16F /* BattleUtils.swift */,
 				C6053991BF4943A7B068671A /* MapSpotHelper.swift */,
 				C60E827F7B7EBF59C77EE148 /* MissionUtils.swift */,
+				C609C0664752645FCD27D530 /* SlotType.swift */,
+				C6077DD0FBB7590D3C3552DD /* Const.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -604,7 +607,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -786,7 +789,6 @@
 				C60F5BAAEAE39FCCEFA1F716 /* HpBar.swift in Sources */,
 				C60687ECA5DF72AFC7551CF7 /* FleetUtils.swift in Sources */,
 				C60F325A35757140FFEEAAFB /* Extensions.swift in Sources */,
-				C60A764D76F63DE0B35F7AE4 /* SlotType.swift in Sources */,
 				C60E477C9B58D2F4FCF7B730 /* BattleVC.swift in Sources */,
 				C6056BD0D420419CED67E8B6 /* BattleStart.swift in Sources */,
 				C60953089383AA6CE404D10E /* BattleDaytime.swift in Sources */,
@@ -835,6 +837,8 @@
 				C6005C185646C3133DBDA91B /* BattleCombinedResult.swift in Sources */,
 				C60B7809F648E03BE82C3DED /* BattleCombinedWater.swift in Sources */,
 				C6016B88D3F501580151D5E8 /* BattleCombinedWaterEach.swift in Sources */,
+				C604D218B4420B6F6593ECB5 /* SlotType.swift in Sources */,
+				C607676777CD83910CEDE516 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

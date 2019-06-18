@@ -64,7 +64,7 @@ class Port: JsonBean {
         Battle.instance.phaseShift(value: .Idle)
         Battle.instance.friendCombined = (api_data?.api_combined_flag ?? 0) > 0
 
-        Fleet.instance.shipWatcher.onNext(Transform.All())
+        Fleet.instance.shipWatcher.onNext(Transform.All)
     }
 
 }

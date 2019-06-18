@@ -13,7 +13,7 @@ class RemodelSlot: JsonBean {
     var api_result_msg: String = ""
 
     override func process() {
-
+        setMissionProgress(bean: self, type: MissionRequireType.REMODEL_SLOT)
     }
 
 }

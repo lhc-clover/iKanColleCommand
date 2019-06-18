@@ -7,11 +7,11 @@ import Foundation
 import RxSwift
 import HandyJSON
 
-class IBattleResult<T: IBattleResultApiData>: JsonBean {
+class IBattleResult: JsonBean {
 
     var api_result: Int = 0
     var api_result_msg: String = ""
-    var api_data: T?
+    var api_data: BattleResultApiData? = BattleResultApiData()
 
     required init() {
 
@@ -19,7 +19,20 @@ class IBattleResult<T: IBattleResultApiData>: JsonBean {
 
 }
 
-class IBattleResultApiData: HandyJSON {
+class BattleResult: IBattleResult {
+
+    override func process() {
+        if let ship = api_data?.api_get_ship {
+            Battle.instance.get = ship.api_ship_name
+        }
+        Battle.instance.phaseShift(value: Phase.BattleResult)
+
+        setMissionProgress(bean: self, type: MissionRequireType.BATTLE)
+    }
+
+}
+
+class BattleResultApiData: HandyJSON {
 
     var api_ship_id = Array<Int>()
     var api_win_rank: String?
@@ -44,27 +57,13 @@ class IBattleResultApiData: HandyJSON {
     var api_get_exmap_useitem_id: Int = 0
     var api_escape_flag: Int = 0
     var api_escape: Any?
+    var api_mvp_combined: Int = 0
+    var api_get_ship_exp_combined = Array<Int>()
+    var api_get_exp_lvup_combined = Array<Array<Int>>()
 
     required init() {
 
     }
-
-}
-
-class BattleResult: IBattleResult<BattleResultApiData> {
-
-    override func process() {
-        if let ship = api_data?.api_get_ship {
-            Battle.instance.get = ship.api_ship_name
-        }
-        Battle.instance.phaseShift(value: Phase.BattleResult)
-
-        setMissionProgress(bean: self, type: MissionRequireType.BATTLE)
-    }
-
-}
-
-class BattleResultApiData: IBattleResultApiData {
 
 }
 

@@ -21,6 +21,8 @@ class DestroyItem: JsonBean {
     }
 
     private func plusValue(_ material: BehaviorSubject<Int>, _ value: Int?) {
+        setMissionProgress(bean: self, type: MissionRequireType.DESTROY_ITEM)
+
         if let value = value, value > 0 {
             do {
                 try material.onNext(material.value() + value)

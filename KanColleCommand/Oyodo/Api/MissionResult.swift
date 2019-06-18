@@ -14,7 +14,7 @@ class MissionResult: JsonBean {
     var api_data: MissionResultData? = MissionResultData()
 
     override func process() {
-
+        setMissionProgress(bean: self, type: MissionRequireType.EXPEDITION)
     }
 
 }

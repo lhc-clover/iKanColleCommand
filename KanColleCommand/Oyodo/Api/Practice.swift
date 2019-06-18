@@ -63,7 +63,7 @@ class Practice: JsonBean {
 
         Battle.instance.phaseShift(value: Phase.Practice)
 
-        Fleet.instance.shipWatcher.onNext(Transform.All())
+        Fleet.instance.shipWatcher.onNext(Transform.All)
     }
 }
 

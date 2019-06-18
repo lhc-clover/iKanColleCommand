@@ -37,7 +37,7 @@ class Fleet {
 }
 
 enum Transform {
-    case All()
+    case All
     case Add(Array<Int>)
     case Remove(Array<Int>)
     case Change(Array<Int>)

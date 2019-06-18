@@ -11,7 +11,7 @@ class CreateShip: JsonBean {
     var api_result_msg: String = ""
 
     override func process() {
-
+        setMissionProgress(bean: self, type: MissionRequireType.CREATE_SHIP)
     }
 
 }

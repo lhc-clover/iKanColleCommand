@@ -18,6 +18,8 @@ class PracticeResult: JsonBean {
             Battle.instance.rank = rank
         }
         Battle.instance.phaseShift(value: Phase.PracticeResult)
+
+        setMissionProgress(bean: self, type: MissionRequireType.PRACTICE)
     }
 
 }

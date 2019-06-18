@@ -351,3 +351,4 @@ enum Phase {
     case BattleCombinedResult
     case Next
 }
+

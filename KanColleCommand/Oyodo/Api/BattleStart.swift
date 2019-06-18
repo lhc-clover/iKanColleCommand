@@ -25,7 +25,7 @@ class BattleStart: JsonBean {
         Battle.instance.friendIndex = (Int(params["api_deck_id"] ?? "0") ?? 0) - 1
 
         Battle.instance.phaseShift(value: Phase.Start)
-        Fleet.instance.shipWatcher.onNext(Transform.All())
+        Fleet.instance.shipWatcher.onNext(Transform.All)
     }
 
 }

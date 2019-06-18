@@ -27,6 +27,8 @@ class NyukyoStart: JsonBean {
                 print("Got error in NyukyoStart process")
             }
         }
+
+        setMissionProgress(bean: self, type: MissionRequireType.REPAIR)
     }
 
 }

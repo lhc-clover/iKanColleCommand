@@ -21,7 +21,7 @@ class SlotItem: JsonBean {
             Fleet.instance.slotMap[item.api_id] = slot
         }
         User.instance.slotCount.onNext(Fleet.instance.slotMap.count)
-        Fleet.instance.slotWatcher.onNext(Transform.All())
+        Fleet.instance.slotWatcher.onNext(Transform.All)
     }
 
 }

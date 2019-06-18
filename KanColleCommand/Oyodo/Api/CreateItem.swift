@@ -22,6 +22,7 @@ class CreateItem: JsonBean {
             Fleet.instance.slotWatcher.onNext(Transform.Add(Array(arrayLiteral: slotId)))
             User.instance.slotCount.onNext(Fleet.instance.slotMap.count)
         }
+        setMissionProgress(bean: self, type: MissionRequireType.CREATE_ITEM)
     }
 
 }
