@@ -50,6 +50,9 @@ extension KCWebView: UIWebViewDelegate {
                     let header: String = dic?["request"] ?? ""
                     let body: String = dic?["response"] ?? ""
                     if (url.contains("kcsapi")) {
+                        print(url)
+                        print(header)
+                        print(body)
                         Oyodo.attention().api(url: url, request: header, response: body.replacingOccurrences(of: "svdata=", with: ""))
                     }
                 } catch {

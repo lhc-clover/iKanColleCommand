@@ -74,10 +74,12 @@ extension Fleet {
 
     func isInBattle(index: Int) -> Bool {
         var result = false
-        if (Battle.instance.friendCombined) {
-            result = (index == 0 || index == 1)
-        } else {
-            result = (Battle.instance.friendIndex == index)
+        if (Battle.instance.friendIndex >= 0) {
+            if (Battle.instance.friendCombined) {
+                result = (index == 0 || index == 1)
+            } else {
+                result = (Battle.instance.friendIndex == index)
+            }
         }
         return result
     }

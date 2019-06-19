@@ -159,12 +159,15 @@ class BattleVC: UIViewController {
             if (Battle.instance.friendCombined) {
                 self.friendListDataSource.friendFleet1 = Fleet.instance.getShips(index: 0)
                 self.friendListDataSource.friendFleet2 = Fleet.instance.getShips(index: 1)
-                self.enemyListDataSource.enemyFleet1 = Battle.instance.subEnemyList
-                self.enemyListDataSource.enemyFleet2 = Battle.instance.enemyList
             } else {
                 let friendFleetIndex = Battle.instance.friendIndex
                 self.friendListDataSource.friendFleet1 = Fleet.instance.getShips(index: friendFleetIndex)
                 self.friendListDataSource.friendFleet2.removeAll()
+            }
+            if (Battle.instance.enemyCombined) {
+                self.enemyListDataSource.enemyFleet1 = Battle.instance.enemyList
+                self.enemyListDataSource.enemyFleet2 = Battle.instance.subEnemyList
+            } else {
                 self.enemyListDataSource.enemyFleet1 = Battle.instance.enemyList
                 self.enemyListDataSource.enemyFleet2.removeAll()
             }
@@ -194,7 +197,10 @@ class BattleVC: UIViewController {
             resultText.text = ""
             getText.text = ""
             break
-        case Phase.BattleDaytime, Phase.BattleNight, Phase.BattleNightSp, Phase.BattleAir:
+        case Phase.BattleDaytime, Phase.BattleNight, Phase.BattleNightSp, Phase.BattleAir,
+             Phase.BattleCombined, Phase.BattleCombinedAir, Phase.BattleCombinedEach, Phase.BattleCombinedEc, Phase.BattleCombinedWater,
+             Phase.BattleCombinedWaterEach, Phase.BattleCombinedNight,
+             Phase.Practice, Phase.PracticeNight:
             nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
             let spot = MapSpotHelper.instance.getSpotMarker(area: Battle.instance.area, map: Battle.instance.map, route: Battle.instance.route)
             nextText.text = "\(spot?[safe: 1] ?? "")"
@@ -203,7 +209,7 @@ class BattleVC: UIViewController {
             resultText.text = Battle.instance.rank
             getText.text = ""
             break
-        case Phase.BattleResult:
+        case Phase.BattleResult, Phase.BattleCombinedResult, Phase.PracticeResult:
             nodeText.text = "\(Battle.instance.area)-\(Battle.instance.map)"
             let spot = MapSpotHelper.instance.getSpotMarker(area: Battle.instance.area, map: Battle.instance.map, route: Battle.instance.route)
             nextText.text = "\(spot?[safe: 1] ?? "")"

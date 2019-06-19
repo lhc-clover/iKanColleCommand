@@ -16,8 +16,8 @@ class BattleCombinedNight: JsonBean {
     override func process() {
         Battle.instance.newTurn()
         Battle.instance.calcTargetDamage(targetList: api_data?.api_friendly_battle?.api_hougeki?.api_df_list,
-                damageList: api_data?.api_hougeki?.api_damage,
-                flagList: api_data?.api_hougeki?.api_at_eflag, enemyOnly: true)
+                damageList: api_data?.api_friendly_battle?.api_hougeki?.api_damage,
+                flagList: api_data?.api_friendly_battle?.api_hougeki?.api_at_eflag, enemyOnly: true)
         Battle.instance.calcTargetDamage(targetList: api_data?.api_hougeki?.api_df_list,
                 damageList: api_data?.api_hougeki?.api_damage,
                 flagList: api_data?.api_hougeki?.api_at_eflag)

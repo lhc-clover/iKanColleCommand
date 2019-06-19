@@ -12,7 +12,7 @@ class Oyodo {
     private static let sharedInstance = Oyodo()
 
     private init() {
-
+//        http://125.6.184.215/kcsapi/api_req_air_corps/supply
     }
 
     public class func attention() -> Oyodo {
@@ -21,7 +21,9 @@ class Oyodo {
 
     public func api(url: String, request: String, response: String) {
         var bean: JsonBean? = nil
-        if (url.hasSuffix("api_req_sortie/ld_airbattle")) {
+        if (url.hasSuffix("api_req_air_corps/supply")) {
+            bean = AirBaseSupply.deserialize(from: response)
+        } else if (url.hasSuffix("api_req_sortie/ld_airbattle")) {
             bean = BattleAir.deserialize(from: response)
         } else if (url.hasSuffix("api_req_combined_battle/battle")) {
             bean = BattleCombined.deserialize(from: response)

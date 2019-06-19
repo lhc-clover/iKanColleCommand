@@ -40,10 +40,10 @@ class BattleCombinedEc: JsonBean {
             for (index, id) in list.enumerated() {
                 if let rawShip = Raw.instance.rawShipMap[id] {
                     let enemy = Ship(rawShip: rawShip)
-                    enemy.level = api_data?.api_ship_lv[safe: index] ?? 0
-                    enemy.nowHp = api_data?.api_e_nowhps[safe: index] ?? 0
-                    enemy.maxHp = api_data?.api_e_maxhps[safe: index] ?? 0
-                    if let slots = api_data?.api_eSlot[safe: index] {
+                    enemy.level = api_data?.api_ship_lv_combined[safe: index] ?? 0
+                    enemy.nowHp = api_data?.api_e_nowhps_combined[safe: index] ?? 0
+                    enemy.maxHp = api_data?.api_e_maxhps_combined[safe: index] ?? 0
+                    if let slots = api_data?.api_eSlot_combined[safe: index] {
                         enemy.items.append(contentsOf: slots)
                     }
                     subEnemies.append(enemy)
