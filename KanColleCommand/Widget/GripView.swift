@@ -14,14 +14,14 @@ protocol GripDelegate {
 class GripView: UIView {
 
     private var delegate: GripDelegate? = nil
-    private let titles = Array(arrayLiteral: "舰队", "战斗", "任务")
+    private let titles = Array(arrayLiteral: "舰\n队", "战\n斗", "任\n务")
 
     public func gripTo(view: UIView) {
         backgroundColor = UIColor(white: 0.144, alpha: 1)
         self.snp.makeConstraints { maker in
             maker.height.equalTo(view.snp.height)
             maker.right.equalTo(view.snp.left)
-            maker.width.equalTo(32)
+            maker.width.equalTo(40)
         }
         let count = titles.count
         var last: UIButton? = nil
@@ -29,7 +29,9 @@ class GripView: UIView {
             let button = UIButton(type: .custom)
             button.tag = i
             button.setTitle(title, for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+            button.titleLabel?.lineBreakMode = .byWordWrapping
+            button.titleLabel?.numberOfLines = 0
             button.addTarget(self, action: #selector(onClick), for: .touchUpInside)
             addSubview(button)
             var top: ConstraintItem = view.snp.top

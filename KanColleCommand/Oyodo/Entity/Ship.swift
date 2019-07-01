@@ -115,7 +115,7 @@ extension Ship {
         for (index, equipId) in items.enumerated() {
             let carry = carrys[safe: index] ?? 0
             if let slot = Fleet.instance.slotMap[equipId] {
-                let baseAAC = calcBasicAAC(type: slot.type, aac: slot.calcLevelAAC(), carry: carry)
+                let baseAAC = calcBasicAAC(type: slot.typeCalc, aac: slot.calcLevelAAC(), carry: carry)
                 let masteryAAC = slot.calcMasteryAAC(mode: 0)
                 totalAAC[0] += Int(floor(baseAAC + masteryAAC[0]))
                 totalAAC[1] += Int(floor(baseAAC + masteryAAC[1]))
@@ -127,15 +127,15 @@ extension Ship {
     private func calcBasicAAC(type: Int, aac: Double, carry: Int) -> Double {
         var result: Double
         if (type == FIGHTER
-                && type == BOMBER
-                && type == TORPEDO_BOMBER
-                && type == SEA_BOMBER
-                && type == SEA_FIGHTER
-                && type == LBA_AIRCRAFT
-                && type == ITCP_FIGHTER
-                && type == JET_FIGHTER
-                && type == JET_BOMBER
-                && type == JET_TORPEDO_BOMBER) {
+                || type == BOMBER
+                || type == TORPEDO_BOMBER
+                || type == SEA_BOMBER
+                || type == SEA_FIGHTER
+                || type == LBA_AIRCRAFT
+                || type == ITCP_FIGHTER
+                || type == JET_FIGHTER
+                || type == JET_BOMBER
+                || type == JET_TORPEDO_BOMBER) {
             result = sqrt(Double(carry)) * aac
         } else {
             result = 0

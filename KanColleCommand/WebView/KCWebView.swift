@@ -1,16 +1,26 @@
 import Foundation
 import WebKit
 import SnapKit
+import ScreenType
 
 class KCWebView: UIWebView {
 
     func setup(parent: UIView) {
         parent.addSubview(self)
-        self.snp.makeConstraints { maker in
-            maker.height.equalTo(parent.snp.height)
-            maker.width.equalTo(self.snp.height).multipliedBy(Float(15) / Float(9))
-            maker.top.equalTo(parent)
-            maker.centerX.equalTo(parent)
+        if (UIScreen.current <= .iPhone5_5) {
+            self.snp.makeConstraints { maker in
+                maker.width.equalTo(parent.snp.width).inset(40)
+                maker.height.equalTo(self.snp.width).multipliedBy(Float(9) / Float(15))
+                maker.top.equalTo(parent)
+                maker.center.equalTo(parent)
+            }
+        } else {
+            self.snp.makeConstraints { maker in
+                maker.height.equalTo(parent.snp.height)
+                maker.width.equalTo(self.snp.height).multipliedBy(Float(15) / Float(9))
+                maker.top.equalTo(parent)
+                maker.centerX.equalTo(parent)
+            }
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(gameStart), name: Constants.START_EVENT, object: nil)

@@ -10,4 +10,6 @@ target :KanColleCommand do
   pod 'UMCCommon'
   pod 'UMCSecurityPlugins'
   pod 'UMCAnalytics'
+  pod 'ScreenType'
+  pod 'ReachabilitySwift'
 end

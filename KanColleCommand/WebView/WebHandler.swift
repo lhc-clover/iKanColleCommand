@@ -17,7 +17,7 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
         let key = URLProtocol.property(forKey: Constants.TAG, in: request)
         var intercept = false
         if let url: URL = request.url {
-            let method = request.httpMethod ?? ""
+//            let method = request.httpMethod ?? ""
             intercept = (key == nil)
 //                    && ("GET".caseInsensitiveCompare(method) == .orderedSame)
                     && shouldIntercept(url: url)
@@ -50,10 +50,6 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
 
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse,
                     completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-//        print("===============================================")
-//        print(dataTask.taskDescription)
-//        print(response.description)
-//        print("===============================================")
         self.client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .allowed)
         self.receivedData = Data()
         completionHandler(.allow)
@@ -69,13 +65,14 @@ class WebHandler: URLProtocol, URLSessionDelegate, URLSessionDataDelegate, URLSe
             print("===============================================")
             print(e)
             print("===============================================")
+            let retryCount = Setting.getRetryCount()
             let tag = (URLProtocol.property(forKey: Constants.TAG, in: request) as? Int ?? 0) + 1
-            if (tag < 3) {
+            if (tag <= retryCount) {
                 Toast(text: "第\(tag)次重试").show()
+                loadResponseFromWeb()
             } else {
                 self.client?.urlProtocol(self, didFailWithError: e)
             }
-            loadResponseFromWeb()
         } else {
             if (CacheManager.shouldCache(url: self.request.url) &&
                     ("GET".caseInsensitiveCompare(request.httpMethod ?? "") == ComparisonResult.orderedSame)) {

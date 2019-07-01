@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		421A2643226C0DE500AEC67D /* bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = C60370758B94FB19D95980E0 /* bridge.js */; };
 		423AF77A219FECC100C4BCE9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423AF779219FECC100C4BCE9 /* WebKit.framework */; };
+		42C20DA922C5B4A400235A19 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C20DA822C5B4A400235A19 /* Photos.framework */; };
 		C600267289FBB1B5CB83D4F7 /* BattleNightSp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600E2F28E1FB2811C399D06 /* BattleNightSp.swift */; };
 		C60032DCBAD6778EA3AB8E6A /* slot_36.png in Resources */ = {isa = PBXBuildFile; fileRef = C6025C1FA627C532327B8DE5 /* slot_36.png */; };
 		C600576CDD4CBA34995FE911 /* slot_32.png in Resources */ = {isa = PBXBuildFile; fileRef = C605E233C8A8C4329F2B809E /* slot_32.png */; };
@@ -29,11 +30,12 @@
 		C60239428DAE4A227835277B /* slot_7.png in Resources */ = {isa = PBXBuildFile; fileRef = C602023BC06A6F043C462519 /* slot_7.png */; };
 		C602569B2F6BC8FBC5614C09 /* KanColleCommand.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C60EA856D4DB1DF671528A6C /* KanColleCommand.xcdatamodeld */; };
 		C6025D87FCD09567DC27D893 /* slot_41.png in Resources */ = {isa = PBXBuildFile; fileRef = C60D49F480B87AAE9DF46DC0 /* slot_41.png */; };
+		C6028B9DE54DF77C78A691C3 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60BA2F315190D76C746A3F4 /* SettingVC.swift */; };
 		C602A766A6383FF2C8ACC4AB /* slot_34.png in Resources */ = {isa = PBXBuildFile; fileRef = C601556D1279EBF82B9DC4E5 /* slot_34.png */; };
 		C602B05DBA589F74F6DBD91C /* RequireInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60FE5A3EA598BCB448EB3D1 /* RequireInfo.swift */; };
 		C602D0FBE12A6834657C1650 /* BattleAir.swift in Sources */ = {isa = PBXBuildFile; fileRef = C600C34FD9E0262F451C37AA /* BattleAir.swift */; };
 		C602D6D0C83BB51A12306A6B /* BattleNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E657E36BD1BDEEBFFE8E1 /* BattleNext.swift */; };
-		C6032EDD0A03F7FDB8912999 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = C60EB3466E6CFC31FD43471F /* reload.png */; };
+		C602E9900E3162288191DB55 /* AirBaseSupply.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6030889BAAE6858E8AAE211 /* AirBaseSupply.swift */; };
 		C6036A28F3CABAA0233A4253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AA770F5514D4CBEC193DA /* AppDelegate.swift */; };
 		C60380E7F74A8EC05F884F2E /* slot_46.png in Resources */ = {isa = PBXBuildFile; fileRef = C60BDA4035BE343933151CF9 /* slot_46.png */; };
 		C6038E643376462DA5D234B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C603F6E069897E869ECE8C8C /* LaunchScreen.storyboard */; };
@@ -42,6 +44,7 @@
 		C603E8B8FC3E785FC0E57FBB /* GetShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6060053764F25FC6A58F353 /* GetShip.swift */; };
 		C603FD943AEE0AACDB6A1363 /* SlotDeprive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E384C65DD6853A2066230 /* SlotDeprive.swift */; };
 		C60403E85A7821E99C4DF039 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C602CFA72C98062E0E8DEF71 /* Deck.swift */; };
+		C60414422912E77C7732510B /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C6072A142333CBDE650ED8F4 /* setting.png */; };
 		C6041A0C7396D1E3ECDA2F82 /* MissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60FBA302BB12A91F89F5406 /* MissionResult.swift */; };
 		C6046434F18C87BE2A5DF593 /* slot_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C60CA5AB97BA99212F10CDB8 /* slot_2.png */; };
 		C6047AE1FDB7729229F5C631 /* BattleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60D7E46BB847DCF279EB16F /* BattleUtils.swift */; };
@@ -70,6 +73,7 @@
 		C607188757501EBC6FFFF37F /* slot_6.png in Resources */ = {isa = PBXBuildFile; fileRef = C602F618B6822B69047B78E0 /* slot_6.png */; };
 		C6071A246FB4C7B951D17DB2 /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60C0EB056D219A43DD9B690 /* Dock.swift */; };
 		C607346CDF5B5D15AE084DF9 /* slot_42.png in Resources */ = {isa = PBXBuildFile; fileRef = C6076E573AD0D010AB23C203 /* slot_42.png */; };
+		C60755B39CF8DD92AA4F79A6 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = C60C84330DAB1FCFD96089CD /* reload.png */; };
 		C607676777CD83910CEDE516 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6077DD0FBB7590D3C3552DD /* Const.swift */; };
 		C60786DC33A779A0922D6376 /* BattleCombined.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60131996EDAA592E94EBF98 /* BattleCombined.swift */; };
 		C607D87F817C3835F48C27E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60FF98AA6E3FDAC202E22EA /* Assets.xcassets */; };
@@ -112,9 +116,12 @@
 		C60C6309ADFD00A282F48A17 /* MapSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6072ABEE1F163B14F31F553 /* MapSpot.swift */; };
 		C60C741AAB65987FA80E16F9 /* Ship3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6083B0E3A77464AE392044B /* Ship3.swift */; };
 		C60C802DA29C80E1BE957AA8 /* PresetSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6006F097A5D24B7915BFFDE /* PresetSelect.swift */; };
+		C60C8D6EC24C7B9BCAABCB18 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608D57A75850AD8AC34C891 /* Setting.swift */; };
 		C60CA431AF561B9291CA172D /* slot_17.png in Resources */ = {isa = PBXBuildFile; fileRef = C6033A047892D60D2381DF12 /* slot_17.png */; };
 		C60CC2D7C8DAB564E870B03B /* Oyodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60516484616A00807A82136 /* Oyodo.swift */; };
+		C60CC94525AC55450271FEC5 /* wechat_qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = C60EAD3B341E8907BD9F2D39 /* wechat_qrcode.png */; };
 		C60CD193DE76711747D86253 /* slot_30.png in Resources */ = {isa = PBXBuildFile; fileRef = C602624AE92BC5B136058417 /* slot_30.png */; };
+		C60D1D1D7F958708DE7899A7 /* badly_damage_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = C602F1421F7F8869EC85A87A /* badly_damage_warning.png */; };
 		C60D37EC324C68F57B3F9B2C /* Port.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60248A396108DE104485E9E /* Port.swift */; };
 		C60D48474DCBBA3A4D7D0ECD /* slot_0.png in Resources */ = {isa = PBXBuildFile; fileRef = C602CFBC1482BF401851866B /* slot_0.png */; };
 		C60D65AB0E243628FE26A911 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608689972004F96C9275161 /* Change.swift */; };
@@ -153,6 +160,7 @@
 		4202BEA5224133F300AED2D4 /* Files.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Files.bundle; path = /Users/cc/Development/github/iKanColleCommand/KanColleCommand/Files.bundle; sourceTree = "<absolute>"; };
 		4211C351228C636100F7B267 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		423AF779219FECC100C4BCE9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		42C20DA822C5B4A400235A19 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		61B0E6346279897DF1C7D1A8 /* Pods_KanColleCommand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KanColleCommand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13C1AA5A0C1AE357F660C12 /* Pods-KanColleCommand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanColleCommand.release.xcconfig"; path = "Pods/Target Support Files/Pods-KanColleCommand/Pods-KanColleCommand.release.xcconfig"; sourceTree = "<group>"; };
 		C600010C70E9931478A661DB /* DestroyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestroyItem.swift; sourceTree = "<group>"; };
@@ -187,7 +195,9 @@
 		C602AA615C49053A678E2107 /* BattleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleVC.swift; sourceTree = "<group>"; };
 		C602CFA72C98062E0E8DEF71 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		C602CFBC1482BF401851866B /* slot_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_0.png; sourceTree = "<group>"; };
+		C602F1421F7F8869EC85A87A /* badly_damage_warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badly_damage_warning.png; sourceTree = "<group>"; };
 		C602F618B6822B69047B78E0 /* slot_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_6.png; sourceTree = "<group>"; };
+		C6030889BAAE6858E8AAE211 /* AirBaseSupply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirBaseSupply.swift; sourceTree = "<group>"; };
 		C60312B18890C71498251882 /* slot_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_40.png; sourceTree = "<group>"; };
 		C6031347E4C7C21654E3FFC3 /* Raw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Raw.swift; sourceTree = "<group>"; };
 		C6031ED7CF947B8DF3DE2B83 /* slot_38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_38.png; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 		C606E9B60DBB04647A193135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C606FDD1FF4F6F33A025D0CB /* slot_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_11.png; sourceTree = "<group>"; };
 		C60716E10EC15C829F5EC522 /* slot_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_1.png; sourceTree = "<group>"; };
+		C6072A142333CBDE650ED8F4 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		C6072ABEE1F163B14F31F553 /* MapSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSpot.swift; sourceTree = "<group>"; };
 		C6076E573AD0D010AB23C203 /* slot_42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_42.png; sourceTree = "<group>"; };
 		C6077DD0FBB7590D3C3552DD /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -242,6 +253,7 @@
 		C60873D3E35D3E4F88BBADF9 /* slot_27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_27.png; sourceTree = "<group>"; };
 		C60898C360179BF54B2FD464 /* Expedition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expedition.swift; sourceTree = "<group>"; };
 		C608D5761D07AB08EBD690A3 /* Fleet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fleet.swift; sourceTree = "<group>"; };
+		C608D57A75850AD8AC34C891 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C60977D55641E6FF5131EE0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6097F6325D861ECB1C2C056 /* slot_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_18.png; sourceTree = "<group>"; };
 		C609C0664752645FCD27D530 /* SlotType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotType.swift; sourceTree = "<group>"; };
@@ -254,6 +266,7 @@
 		C60B167C46AD1B2BAB20241F /* FleetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FleetVC.swift; sourceTree = "<group>"; };
 		C60B199FD227783246028533 /* KCWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCWebView.swift; sourceTree = "<group>"; };
 		C60B9953A3140FA8440DB361 /* Start.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		C60BA2F315190D76C746A3F4 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		C60BBF41D2113389EFDCE62E /* slot_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_3.png; sourceTree = "<group>"; };
 		C60BC20A1B3EF4B5CFAF8246 /* DestroyShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestroyShip.swift; sourceTree = "<group>"; };
 		C60BC832C07B8D492871A35E /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
@@ -262,6 +275,7 @@
 		C60BFCABA6B1645FB4E04E5C /* CreateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItem.swift; sourceTree = "<group>"; };
 		C60C0EB056D219A43DD9B690 /* Dock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dock.swift; sourceTree = "<group>"; };
 		C60C72EE01E0F5C7D022DB30 /* slot_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_44.png; sourceTree = "<group>"; };
+		C60C84330DAB1FCFD96089CD /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		C60C86DB5CFCFCFA3A9E8533 /* slot_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_13.png; sourceTree = "<group>"; };
 		C60CA5AB97BA99212F10CDB8 /* slot_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_2.png; sourceTree = "<group>"; };
 		C60CC3F19E8BABAE68B5B024 /* PowerUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
@@ -285,7 +299,7 @@
 		C60E384C65DD6853A2066230 /* SlotDeprive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotDeprive.swift; sourceTree = "<group>"; };
 		C60E657E36BD1BDEEBFFE8E1 /* BattleNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleNext.swift; sourceTree = "<group>"; };
 		C60E827F7B7EBF59C77EE148 /* MissionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionUtils.swift; sourceTree = "<group>"; };
-		C60EB3466E6CFC31FD43471F /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		C60EAD3B341E8907BD9F2D39 /* wechat_qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat_qrcode.png; sourceTree = "<group>"; };
 		C60EBD2F6C9FD7A64BC01E66 /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		C60EE05A6DB97CA59BDA9AE9 /* NyukyoStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyukyoStart.swift; sourceTree = "<group>"; };
 		C60EEDDE8EA04915F77E526C /* KanColleCommand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanColleCommand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C20DA922C5B4A400235A19 /* Photos.framework in Frameworks */,
 				423AF77A219FECC100C4BCE9 /* WebKit.framework in Frameworks */,
 				CABACA2C6DCC15F3AAA97F0B /* Pods_KanColleCommand.framework in Frameworks */,
 			);
@@ -312,6 +327,7 @@
 		7E65389658901A3E07D65070 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42C20DA822C5B4A400235A19 /* Photos.framework */,
 				423AF779219FECC100C4BCE9 /* WebKit.framework */,
 				61B0E6346279897DF1C7D1A8 /* Pods_KanColleCommand.framework */,
 			);
@@ -380,6 +396,7 @@
 				C606CFE86C55528E7264793B /* BattleCombinedResult.swift */,
 				C60428585419A73D01A7991C /* BattleCombinedWater.swift */,
 				C60D636C6B5E0883186B803E /* BattleCombinedWaterEach.swift */,
+				C6030889BAAE6858E8AAE211 /* AirBaseSupply.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -425,6 +442,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		C60715784B118B765671BA92 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C608D57A75850AD8AC34C891 /* Setting.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		C608938942B0394D84C007B2 /* KanColleCommand */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +468,7 @@
 				C60F0A3A447580140D86DC8D /* Images */,
 				C60E18E9080E904BFD5F89AC /* Resources */,
 				4211C351228C636100F7B267 /* Bridge-Header.h */,
+				C60715784B118B765671BA92 /* Util */,
 			);
 			path = KanColleCommand;
 			sourceTree = "<group>";
@@ -485,6 +511,7 @@
 				C60B167C46AD1B2BAB20241F /* FleetVC.swift */,
 				C602AA615C49053A678E2107 /* BattleVC.swift */,
 				C604D66013768942680732EA /* MissionVC.swift */,
+				C60BA2F315190D76C746A3F4 /* SettingVC.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -550,7 +577,10 @@
 				C60BDA4035BE343933151CF9 /* slot_46.png */,
 				C60D417B108472841CA34801 /* slot_47.png */,
 				C60084EE7985C15B28728A61 /* tag_repair.png */,
-				C60EB3466E6CFC31FD43471F /* reload.png */,
+				C60C84330DAB1FCFD96089CD /* reload.png */,
+				C602F1421F7F8869EC85A87A /* badly_damage_warning.png */,
+				C6072A142333CBDE650ED8F4 /* setting.png */,
+				C60EAD3B341E8907BD9F2D39 /* wechat_qrcode.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -691,7 +721,10 @@
 				C604DD0442B6E9538719A232 /* slot_47.png in Resources */,
 				C6015D5598A8D97D44AE3F12 /* map.json in Resources */,
 				C60577F895480B218423004E /* tag_repair.png in Resources */,
-				C6032EDD0A03F7FDB8912999 /* reload.png in Resources */,
+				C60755B39CF8DD92AA4F79A6 /* reload.png in Resources */,
+				C60D1D1D7F958708DE7899A7 /* badly_damage_warning.png in Resources */,
+				C60414422912E77C7732510B /* setting.png in Resources */,
+				C60CC94525AC55450271FEC5 /* wechat_qrcode.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,8 +763,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-KanColleCommand/Pods-KanColleCommand-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ScreenType/ScreenType.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
@@ -740,8 +775,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScreenType.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
@@ -839,6 +876,9 @@
 				C6016B88D3F501580151D5E8 /* BattleCombinedWaterEach.swift in Sources */,
 				C604D218B4420B6F6593ECB5 /* SlotType.swift in Sources */,
 				C607676777CD83910CEDE516 /* Const.swift in Sources */,
+				C602E9900E3162288191DB55 /* AirBaseSupply.swift in Sources */,
+				C6028B9DE54DF77C78A691C3 /* SettingVC.swift in Sources */,
+				C60C8D6EC24C7B9BCAABCB18 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,7 +915,7 @@
 				INFOPLIST_FILE = KanColleCommand/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.KanColleCommand;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.kancolle.command;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
@@ -895,7 +935,7 @@
 				INFOPLIST_FILE = KanColleCommand/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.KanColleCommand;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.cctech.kancolle.command;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/KanColleCommand/Bridge-Header.h";
