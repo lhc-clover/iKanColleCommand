@@ -1,6 +1,0 @@
-module Pods_KanColleCommand {
-  umbrella header "Pods-KanColleCommand-umbrella.h"
-
-  export *
-  module * { export * }
-}
