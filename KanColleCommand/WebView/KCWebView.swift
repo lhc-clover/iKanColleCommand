@@ -10,14 +10,14 @@ class KCWebView: UIWebView {
         if (UIScreen.current <= .iPhone5_5) {
             self.snp.makeConstraints { maker in
                 maker.width.equalTo(parent.snp.width).inset(40)
-                maker.height.equalTo(self.snp.width).multipliedBy(Float(9) / Float(15))
-                maker.top.equalTo(parent)
-                maker.center.equalTo(parent)
+                maker.height.equalTo(self.snp.width).dividedBy(0.6)
+                maker.top.equalTo(parent.snp.top)
+                maker.centerX.equalTo(parent.snp.centerX)
             }
         } else {
             self.snp.makeConstraints { maker in
                 maker.height.equalTo(parent.snp.height)
-                maker.width.equalTo(self.snp.height).multipliedBy(Float(15) / Float(9))
+                maker.width.equalTo(self.snp.height).multipliedBy(0.6)
                 maker.top.equalTo(parent)
                 maker.centerX.equalTo(parent)
             }
