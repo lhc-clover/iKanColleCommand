@@ -17,7 +17,7 @@ class KCWebView: UIWebView {
         } else {
             self.snp.makeConstraints { maker in
                 maker.height.equalTo(parent.snp.height)
-                maker.width.equalTo(self.snp.height).multipliedBy(0.6)
+                maker.width.equalTo(self.snp.height).dividedBy(0.6)
                 maker.top.equalTo(parent)
                 maker.centerX.equalTo(parent)
             }
